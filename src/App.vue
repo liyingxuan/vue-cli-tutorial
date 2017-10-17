@@ -33,11 +33,13 @@
     name: 'app',
     data() { // 基础数据和变量
       return {
-        todos: [
-          {id: 1, title: '1. Learn VueJS', completed: true}, // completed在应用假设是一种状态，需要通过class样式来显示在页面上的
-          {id: 2, title: '2. Coding', completed: false}
-        ]
+        todos: []
       }
+    },
+    mounted() {
+      this.axios.get('http://localhost/api/todos').then(response => {
+        this.todos = response.data
+      })
     },
     computed: { // 页面中需要处理之后展示的数据，统一放这里
       todoCount() {

@@ -15,4 +15,21 @@
 > 首先将第三章的内容放入Vue CLI构建的Vue项目中进行代码重构。  
 
 
-##### 2.
+##### 2. 课程内容和代码获取方式
+> 每一次提交的代码是该教程第一课的内容，增加内容通过commit message提供。
+
+请根据需要checkout相应的版本，clone之后执行：
+```bash
+// 第一课内容：
+$ git checkout eebdae3eb47347cb07d8e7672aba0675ab909d7b
+
+// 第二课内容：
+```
+[第一课 - 简书地址](http://www.jianshu.com/p/c41d6baeb8f0)
+
+
+##### 3. 相应的后端代码
+
+[配合该教程的API代码 - liyingxuan/lara-vue-api](https://github.com/liyingxuan/lara-vue-api)
+
+后端只会其他语言或框架的，只能自己写下了。
