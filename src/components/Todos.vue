@@ -13,7 +13,7 @@
                 v-on:click="completedTodo(todo)">
           {{ todo.completed ? 'undo' : 'done' }}
         </button>
-        <button class="btn btn-warning btn-xs pull-right" v-on:click="delTodo(index)">Delete</button>
+        <button class="btn btn-warning btn-xs pull-right" v-on:click="delTodo(index, todo)">Delete</button>
       </li>
     </ul>
     <todo-form :todos="todos"></todo-form> <!-- 引入子组件 -->
@@ -32,11 +32,21 @@
       }
     },
     methods: { // 逻辑方法
-      delTodo(index) {
-        this.todos.splice(index, 1)
+      delTodo(index, todo) {
+        // delete删除数据
+        this.axios.delete('http://localhost/api/todo/' + todo.id + '/delete').then(response => {
+          console.log(response.data) // 测试是否连接成功，测试环境没有实际连通DB
+
+          this.todos.splice(index, 1)
+        })
       },
       completedTodo(todo){
-        todo.completed = !todo.completed
+        // patch更新数据
+        this.axios.patch('http://localhost/api/todo/' + todo.id + '/completed').then(response => {
+          console.log(response.data) // 测试是否连接成功，测试环境没有实际连通DB
+
+          todo.completed = !todo.completed
+        })
       }
     },
     components: { // 引入子组件

@@ -18,6 +18,12 @@
 ##### 2. 课程内容和代码获取方式
 > 每一次提交的代码是该教程第一课的内容，增加内容通过commit message提供。
 
+lesson1:  开始使用Vue CLI  
+lesson2:  前后端分离  
+lesson3:  使用Vue Router  
+lesson4:  使用Vue Router Link  
+lesson5:  补全全套的后端增删改查  
+
 请根据需要checkout相应的版本，clone之后执行：
 ```bash
 // 第一课内容：
@@ -30,11 +36,15 @@ $ git checkout 61c51a6986294d4ed8f03fae4f748c66a3daceb8
 $ git checkout 91a1793787b42d580d86a66da0979bbf2ef59e01
 
 // 第四课内容：
+$ git checkout e6fc840ba0a1fb56b5c0a4acfdf04060fa55b990
+
+// 第五课内容：
 ```
 [第一课 - 简书地址](http://www.jianshu.com/p/c41d6baeb8f0)  
 [第二课 - 简书地址](http://www.jianshu.com/p/2ddebc208841)  
 [第三课 - 简书地址](http://www.jianshu.com/p/2be2dfebb83a)  
-[第四课 - 简书地址](http://www.jianshu.com/p/fe96473e5d9a)
+[第四课 - 简书地址](http://www.jianshu.com/p/fe96473e5d9a)  
+[第五课 - 简书地址](http://www.jianshu.com/p/bafebc3c8e7b)
 
 
 ##### 3. 相应的后端代码

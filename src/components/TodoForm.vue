@@ -23,7 +23,13 @@
       // 注意：这里使用了ES6的语法，如果IDE报错，请设置一下
       // WebStorm设置方法：Preferences > Languages & Frameworks > JavaScript > ECMAScript 6
       addTodo(newTodo) {
-        this.todos.push(newTodo)
+        // Post提交数据
+        this.axios.post('http://localhost/api/todo/create', {title: this.newTodo.title}).then(response => {
+          console.log(response.data) // 测试是否连接成功，测试环境没有实际连通DB
+
+          this.todos.push(newTodo)
+        })
+
         this.newTodo = {id: null, title: '', completed: false}
       }
     }

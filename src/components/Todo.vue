@@ -36,6 +36,7 @@
       fetchData() {
         this.error = this.todo = null
         this.loading = true
+        // Get获取数据
         this.axios.get('http://localhost/api/todo/' + this.$route.params.id).then(response => {
           this.todo = response.data
           this.loading = false
