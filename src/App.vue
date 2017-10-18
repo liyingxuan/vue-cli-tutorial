@@ -1,7 +1,5 @@
 <template>
-  <!-- Bootstrap的部分不用关注，只是基础样式 -->
   <div id="app">
-
     <!-- Bootstrap的部分不用关注，只是基础样式 -->
     <div class="navbar navbar-default navbar-static-top"></div>
 
@@ -13,9 +11,7 @@
             <div class="panel-heading">通过Vue-Cli进行组件化开发</div>
             <div class="panel-body">
               <h4>My Todos {{todoCount}}</h4>
-              <router-view/>
-              <todos :todos="todos"></todos> <!-- 引用JS部分注册的组件；传入todos数据 -->
-              <todo-form :todos="todos"></todo-form> <!-- 引用JS部分注册的组件；传入todos数据 -->
+              <router-view :todos="todos"/> <!-- 通过router view部署组件和传参 -->
             </div>
           </div>
         </div>
@@ -26,9 +22,6 @@
 </template>
 
 <script>
-  import Todos from './components/Todos' // 引用组件Todos
-  import TodoForm from './components/TodoForm' // 引用组件TodoForm
-
   export default {
     name: 'app',
     data() { // 基础数据和变量
@@ -36,7 +29,7 @@
         todos: []
       }
     },
-    mounted() {
+    mounted() { // 获取后端API的数据
       this.axios.get('http://localhost/api/todos').then(response => {
         this.todos = response.data
       })
@@ -45,9 +38,6 @@
       todoCount() {
         return this.todos.length
       }
-    },
-    components: {
-      Todos, TodoForm // 注册组件
     }
   }
 </script>
