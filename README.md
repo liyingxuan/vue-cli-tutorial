@@ -27,10 +27,14 @@ $ git checkout eebdae3eb47347cb07d8e7672aba0675ab909d7b
 $ git checkout 61c51a6986294d4ed8f03fae4f748c66a3daceb8
 
 // 第三课内容：
+$ git checkout 91a1793787b42d580d86a66da0979bbf2ef59e01
+
+// 第四课内容：
 ```
 [第一课 - 简书地址](http://www.jianshu.com/p/c41d6baeb8f0)  
 [第二课 - 简书地址](http://www.jianshu.com/p/2ddebc208841)  
-[第三课 - 简书地址](http://www.jianshu.com/p/2be2dfebb83a)
+[第三课 - 简书地址](http://www.jianshu.com/p/2be2dfebb83a)  
+[第四课 - 简书地址](http://www.jianshu.com/p/fe96473e5d9a)
 
 
 ##### 3. 相应的后端代码

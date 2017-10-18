@@ -10,7 +10,6 @@
           <div class="panel panel-default">
             <div class="panel-heading">通过Vue-Cli进行组件化开发</div>
             <div class="panel-body">
-              <h4>My Todos {{todoCount}}</h4>
               <router-view :todos="todos"/> <!-- 通过router view部署组件和传参 -->
             </div>
           </div>
@@ -33,11 +32,6 @@
       this.axios.get('http://localhost/api/todos').then(response => {
         this.todos = response.data
       })
-    },
-    computed: { // 页面中需要处理之后展示的数据，统一放这里
-      todoCount() {
-        return this.todos.length
-      }
     }
   }
 </script>
